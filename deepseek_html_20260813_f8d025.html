@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>全球市场复盘与展望 | 2026.8.13</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #0b0e14;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      padding: 20px 16px 40px;
+      color: #eaeef2;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #131a22;
+      border-radius: 28px;
+      padding: 28px 20px 32px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      border: 1px solid #2a3340;
+    }
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      border-left: 5px solid #4b8be0;
+      padding-left: 18px;
+      margin-bottom: 6px;
+      color: #f0f4fa;
+    }
+    .subhead {
+      font-size: 0.95rem;
+      color: #8e9bb0;
+      margin-bottom: 28px;
+      padding-left: 23px;
+      border-bottom: 1px solid #25303d;
+      padding-bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 28px 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #2f3d4e;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title span {
+      background: #1f2a36;
+      padding: 2px 12px;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #92a5c0;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 16px 0 12px;
+    }
+    .stat-card {
+      background: #1c2632;
+      border-radius: 18px;
+      padding: 14px 12px;
+      border-left: 3px solid #3b6cad;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .stat-card .label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #889bb3;
+    }
+    .stat-card .value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 4px 0 2px;
+      letter-spacing: -0.02em;
+    }
+    .stat-card .change {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .positive { color: #6fcf97; }
+    .negative { color: #f28b82; }
+    .neutral { color: #f5c542; }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 18px 0 12px;
+      border-radius: 16px;
+      background: #10171f;
+      padding: 4px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      min-width: 480px;
+    }
+    th {
+      text-align: left;
+      padding: 12px 12px 8px 12px;
+      color: #a5b9d0;
+      font-weight: 500;
+      border-bottom: 1px solid #293644;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #1e2936;
+    }
+    .tag {
+      display: inline-block;
+      background: #1f2d3d;
+      padding: 2px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #b6c9e0;
+    }
+    .tag.strong { background: #582f3a; color: #f7a1a1; }
+    .tag.medium { background: #4f452b; color: #f5c542; }
+    .tag.weak { background: #1f3a3a; color: #7fc9c9; }
+
+    .msg-block {
+      background: #111b26;
+      border-radius: 18px;
+      padding: 16px 16px 12px;
+      margin: 18px 0;
+      border-left: 4px solid #4b8be0;
+    }
+    .msg-block .src {
+      font-size: 0.75rem;
+      color: #7f93ad;
+      margin-top: 8px;
+    }
+    .msg-block a {
+      color: #7bb2ff;
+      text-decoration: none;
+      border-bottom: 1px dotted #3f68a0;
+    }
+    .msg-block a:hover {
+      color: #b3d0ff;
+      border-bottom: 1px solid #7bb2ff;
+    }
+
+    .scenario-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 20px 0 10px;
+    }
+    .scenario {
+      flex: 1 1 150px;
+      background: #15202b;
+      border-radius: 20px;
+      padding: 16px 14px;
+      border-top: 4px solid #4b8be0;
+    }
+    .scenario.optimistic { border-top-color: #6fcf97; }
+    .scenario.neutral { border-top-color: #f5c542; }
+    .scenario.pessimistic { border-top-color: #f28b82; }
+    .scenario h4 {
+      font-weight: 500;
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+    }
+    .scenario ul {
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: #cbd7e6;
+    }
+    .scenario ul li {
+      margin-bottom: 4px;
+    }
+
+    .footer-note {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #667a92;
+      border-top: 1px solid #23303d;
+      padding-top: 22px;
+    }
+
+    /* 移动端优化 */
+    @media (max-width: 600px) {
+      body { padding: 12px 8px; }
+      .container { padding: 16px 12px; }
+      h1 { font-size: 1.5rem; padding-left: 12px; }
+      .subhead { font-size: 0.8rem; padding-left: 12px; flex-direction: column; gap: 4px; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .stat-card .value { font-size: 1.2rem; }
+      .scenario-flex { flex-direction: column; }
+      .scenario { flex: 1 1 auto; }
+      .section-title { font-size: 1.1rem; }
+      .msg-block { padding: 14px; }
+      table { font-size: 0.75rem; min-width: 340px; }
+      td, th { padding: 6px 8px; }
+    }
+    @media (max-width: 400px) {
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>📊 全球市场复盘 · 展望</h1>
+  <div class="subhead">
+    <span>2026年8月13日 盘后分析</span>
+    <span style="color:#7a8da6;">数据截至 20:00 CST</span>
+  </div>
+
+  <!-- 1. 当日全球股市总结 -->
+  <div class="section-title">🌍 当日全球股市总结 <span>联动·资金·大类资产</span></div>
+
+  <div class="card-grid">
+    <div class="stat-card"><div class="label">上证指数</div><div class="value">3,926.96</div><div class="change negative">▼ -0.50%</div></div>
+    <div class="stat-card"><div class="label">深证成指</div><div class="value">14,289.44</div><div class="change negative">▼ -0.87%</div></div>
+    <div class="stat-card"><div class="label">创业板指</div><div class="value">3,586.04</div><div class="change negative">▼ -0.45%</div></div>
+    <div class="stat-card"><div class="label">恒生指数</div><div class="value">25,396.51</div><div class="change negative">▼ -0.17%</div></div>
+    <div class="stat-card"><div class="label">恒生科技</div><div class="value">—</div><div class="change positive">▲ +0.33%</div></div>
+    <div class="stat-card"><div class="label">北向资金</div><div class="value" style="font-size:1.1rem;">小幅净流入</div><div class="change neutral">成长赛道</div></div>
+  </div>
+
+  <div style="background:#0f1720; border-radius:18px; padding:12px 16px; margin:10px 0 6px;">
+    <p style="margin:4px 0;"><strong>📉 A股复盘</strong> · 今日上演“过山车”，早盘高开创业板一度涨超1.6%，午后放量跳水，超4300只个股下跌，仅1144只上涨。两市成交额2.55万亿元，较前一交易日放量约4008亿元。<br>
+    <span style="color:#b0c7dd;">板块：</span>CRO/创新药逆市领涨，贵金属、房地产、教育跌幅居前。尾盘跳水系“妖股”炸板、利好兑现、年线压力及量能结构失衡共振所致[citation:2]。</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>市场/资产</th><th>最新</th><th>涨跌幅</th></tr></thead>
+      <tbody>
+        <tr><td>道琼斯 (隔夜)</td><td>53,770.27</td><td class="negative">▼ -0.04%</td></tr>
+        <tr><td>标普500 (隔夜)</td><td>7,748.50</td><td class="positive">▲ +0.26%</td></tr>
+        <tr><td>纳斯达克 (隔夜)</td><td>26,588.49</td><td class="positive">▲ +0.54%</td></tr>
+        <tr><td>德国DAX</td><td>26,331.07</td><td class="negative">▼ -0.23%</td></tr>
+        <tr><td>英国富时100</td><td>10,833.15</td><td class="negative">▼ -0.10%</td></tr>
+        <tr><td>法国CAC40</td><td>8,674.94</td><td class="negative">▼ -0.46%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size:0.85rem; color:#8b9fb8; margin:-4px 0 12px;">美股三大指数涨跌不一，CPI温和提振降息预期[citation:1][citation:14]；欧股小幅走弱[citation:7]。</div>
+
+  <div style="background:#101a24; border-radius:18px; padding:14px 16px; margin:14px 0;">
+    <p style="margin:2px 0;"><strong>💰 大类资产联动</strong><br>
+      美元指数涨0.16%报99.97，离岸人民币对美元报6.7461[citation:1]；人民币汇率升至三年半新高，压制国内金价表现[citation:8]。<br>
+      COMEX黄金涨0.63%报4469美元/盎司，美油跌0.75%报82.58美元/桶[citation:1]；10年期美债收益率报4.690%[citation:1]。
+    </p>
+  </div>
+
+  <!-- 2. 盘后利好与利空消息 -->
+  <div class="section-title">📰 盘后利好 &amp; 利空消息 <span>影响级别</span></div>
+
+  <div class="msg-block">
+    <strong>✅ 利好一：央行“送温暖”</strong> —— 央行将在8月14日、17-19日开展隔夜逆回购，每日操作量不超过6000亿元，净投放约1万亿；同时强调保持流动性充裕[citation:3]。<br>
+    <span class="tag strong">强</span> <span style="color:#b0c7dd; margin-left:8px;">中期流动性改善，提振市场信心</span><br>
+    <span class="src">来源：<a href="https://vipwt1.cfi.cn/p20260813000040.html" target="_blank">中财网 [查看原文]</a></span>
+  </div>
+
+  <div class="msg-block">
+    <strong>✅ 利好二：科技产业催化</strong> —— 腾讯大幅增加算力采购（资本支出上调至593亿）；DeepSeek V4 Pro API更新；美股AI概念股飙升（Nebius涨超34%）[citation:3]。<br>
+    <span class="tag medium">中</span> <span style="color:#b0c7dd; margin-left:8px;">AI/算力方向情绪提振</span><br>
+    <span class="src">来源：<a href="https://vipwt1.cfi.cn/p20260813000040.html" target="_blank">中财网 [查看原文]</a></span>
+  </div>
+
+  <div class="msg-block">
+    <strong>✅ 利好三：美国7月CPI回落</strong> —— 美国7月CPI同比增长3.4%（符合预期），核心CPI降至2.5%，交易员将9月加息押注从47%下调至45%[citation:3]。<br>
+    <span class="tag medium">中</span> <span style="color:#b0c7dd; margin-left:8px;">全球风险偏好改善，但A股已部分消化</span><br>
+    <span class="src">来源：<a href="https://vipwt1.cfi.cn/p20260813000040.html" target="_blank">中财网 [查看原文]</a></span>
+  </div>
+
+  <div class="msg-block">
+    <strong>⚠️ 利空一：A股放量跳水，情绪受挫</strong> —— 今日尾盘放量跳水，超4300只个股下跌，短线获利盘集中出逃，技术面年线压力明显[citation:2]。<br>
+    <span class="tag strong">强</span> <span style="color:#b0c7dd; margin-left:8px;">短期情绪冲击，需时间消化</span><br>
+    <span class="src">来源：<a href="https://www.sohu.com/a/1062409764_102180" target="_blank">搜狐财经 [查看原文]</a></span>
+  </div>
+
+  <div class="msg-block">
+    <strong>⚠️ 利空二：美国原油库存大增</strong> —— 美国上周原油库存增加1742.3万桶，大幅超预期，利空石油板块[citation:3]。<br>
+    <span class="tag weak">弱</span> <span style="color:#b0c7dd; margin-left:8px;">结构性影响，能源板块承压</span><br>
+    <span class="src">来源：<a href="https://vipwt1.cfi.cn/p20260813000040.html" target="_blank">中财网 [查看原文]</a></span>
+  </div>
+
+  <div class="msg-block">
+    <strong>⚠️ 利空三：热门中概股普遍下跌</strong> —— 隔夜文远知行跌超9%，传奇生物跌逾5%，新东方、唯品会跌超3%[citation:1]，或影响明日港股及相关A股情绪。<br>
+    <span class="tag weak">弱</span> <span style="color:#b0c7dd; margin-left:8px;">情绪外溢，局部影响</span><br>
+    <span class="src">来源：<a href="https://app.dahecube.com/nweb/pc/article.html?artid=283326" target="_blank">大河财立方 [查看原文]</a></span>
+  </div>
+
+  <!-- 3. 下一个交易日预判 -->
+  <div class="section-title">🔮 明日（8月14日）预判 <span>技术·资金·情景</span></div>
+
+  <div style="background:#0e1722; border-radius:18px; padding:10px 16px; margin:8px 0 12px;">
+    <p><strong>📌 关键观察变量</strong><br>
+    ① 夜间美股及期货走势（纳指期货盘前涨0.08%[citation:6]）；② 央行逆回购净投放落地效果；③ AI/算力板块能否接棒；④ 金融板块（券商/银行）是否护盘；⑤ 北向资金延续性。</p>
+  </div>
+
+  <div class="scenario-flex">
+    <div class="scenario optimistic">
+      <h4>😊 乐观</h4>
+      <ul>
+        <li><strong>开盘：</strong>小幅高开或平开</li>
+        <li><strong>走势：</strong>反包大阳，直冲4000点</li>
+        <li><strong>条件：</strong>美股走强+央行净投放+AI板块爆发，券商领涨[citation:4]</li>
+        <li><strong>沪指区间：</strong>3920–4000</li>
+      </ul>
+    </div>
+    <div class="scenario neutral">
+      <h4>😐 中性（基准）</h4>
+      <ul>
+        <li><strong>开盘：</strong>低开震荡，探底企稳</li>
+        <li><strong>走势：</strong>3900点附近有支撑，金融护盘</li>
+        <li><strong>条件：</strong>多空拉锯，量能维持2.3-2.6万亿[citation:2]</li>
+        <li><strong>沪指区间：</strong>3880–3940</li>
+      </ul>
+    </div>
+    <div class="scenario pessimistic">
+      <h4>😰 悲观</h4>
+      <ul>
+        <li><strong>开盘：</strong>低开，惯性下探</li>
+        <li><strong>走势：</strong>震荡向下，考验3880甚至3860</li>
+        <li><strong>条件：</strong>美股期货走弱+科技股继续出货+杠杆平仓压力[citation:2][citation:11]</li>
+        <li><strong>沪指区间：</strong>3830–3900</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background:#1b2633; border-radius:18px; padding:14px 16px; margin:18px 0 8px;">
+    <p style="margin:2px 0;"><strong>⚡ 应对策略建议</strong><br>
+    • <strong>仓位：</strong>中性偏防守，保持5-6成，留足现金应对波动。<br>
+    • <strong>板块切换：</strong>短期关注CRO/创新药（基本面支撑[citation:2]）、AI算力（腾讯采购+DeepSeek催化[citation:3]）；规避贵金属（汇率压制[citation:8]）、高位炸板题材股。<br>
+    • <strong>盯盘信号：</strong>开盘30分钟量能、券商板块异动、北向资金流向、10年期国债收益率变化。</p>
+  </div>
+
+  <!-- 引用及免责 -->
+  <div style="margin-top:30px; border-top:1px solid #25303d; padding-top:18px; font-size:0.85rem; color:#7f93ad;">
+    <p><strong>📎 数据来源</strong> 综合自东方财富、中财网、搜狐财经、大河财立方、华尔街见闻等公开市场信息，引用标记可点击查看原文。</p>
+  </div>
+
+  <div class="footer-note">
+    本报告由AI生成，仅供参考，不构成投资建议。市场有风险，决策需谨慎。
+  </div>
+
+</div>
+</body>
+</html>
